@@ -6,6 +6,8 @@ import {
 
 import { createTodoElementsFromArray } from './todo';
 
+import { replace } from 'feather-icons';
+
 // categories are nav buttons: Today, Next 7 Days, Important
 
 function createCategoryHeading(category) {

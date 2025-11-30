@@ -5,6 +5,8 @@ import { editProjectDialog } from './editProjectForm';
 import { createCurrentProjectInput } from './currentProjectInput';
 import { createTodoElementsFromArray } from './todo';
 
+import { replace } from 'feather-icons';
+
 function createProjectHeader(projectId) {
   let project = getProject(projectId);
 
