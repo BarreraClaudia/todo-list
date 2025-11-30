@@ -31,3 +31,5 @@ if (!JSON.parse(localStorage.getItem('Project Library'))) {
 createProjectsIconAndButtonList();
 
 createCurrentActiveContent();
+
+feather.replace();
