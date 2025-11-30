@@ -4,7 +4,7 @@ import { createIcon } from './icon';
 import { createProjectContent } from './projectContent';
 import { toggleActiveButton } from './activeContent';
 
-import { replace } from 'feather-icons';
+const feather = require('feather-icons');
 
 function createProjectsIconAndButtonList() {
   let library = getLibrary();
