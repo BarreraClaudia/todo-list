@@ -1,6 +1,6 @@
-# Webpack Template
+# To Do List
 
-Get started with your webpack project. Configured for html, css, images and fonts.
+Create projects and add to do items to them.
 
 ## Usage
 
@@ -18,13 +18,9 @@ Get started with your webpack project. Configured for html, css, images and font
 
 ## Deploy/Redeploy to GitHub Pages
 
-### Deploy
+Make sure you have all your work committed/pushed on main branch `git status`
 
 Make sure you have a gh-pages branch `git branch gh-pages`
-
-### Deploy & Redeploy
-
-Make sure you have all your work committed `git status`
 
 ```
   git checkout gh-pages && git merge main --no-edit
@@ -36,9 +32,6 @@ Make sure you have all your work committed `git status`
   npm run deploy
 
   git checkout main
-
-  # If redeploying ٩(｡•́‿•̀｡)۶
-  git push
 ```
 
 Note: Recall that the source branch for GitHub Pages is set in your repository’s settings. Get this changed to the gh-pages branch.
