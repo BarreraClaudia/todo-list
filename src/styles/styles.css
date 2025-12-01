@@ -148,22 +148,25 @@ Layout
 body {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 
   font-family: 'robotoregular', sans-serif;
   font-size: var(--step-0);
 }
 
+/* main heading */
+
 .main-heading-container {
   grid-column: span 2;
 
-  background: #7189ff;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
   gap: 2rem;
+
+  background: #7189ff;
 }
 
 .main-heading-container h1 {
@@ -172,56 +175,157 @@ body {
   font-weight: 500;
 }
 
-.list-icon {
+.main-heading-container .list-icon {
   width: 100px;
 }
 
+/* navigation */
+
 nav {
-  padding: 1rem;
+  padding: 2rem;
 
   background: #624cab;
   color: #fff;
 }
 
 nav h2 {
-  font-size: var(--step-3);
+  font-size: var(--step-2);
+  font-weight: 500;
+
   border-bottom: 2px solid #fff;
+}
+
+.add-todo-icon-and-btn,
+.add-project-icon-and-btn {
+  margin: 1.25rem 0;
+}
+
+.add-todo-btn,
+.add-project-btn {
+  font-size: var(--step-1);
+  font-weight: 700;
+}
+
+.nav-project-heading {
+  margin-top: 4rem;
 }
 
 nav li {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin: 0.25rem 0;
+  padding: 0.5rem 1rem;
+  width: max-content;
+
+  border-radius: 30px;
+}
+
+nav .feather-icon {
+  width: 32px;
+  height: 32px;
 }
 
 nav button {
-  background: #624cab;
+  background: transparent;
   color: #fff;
   border: none;
 }
 
-.important-icon path {
-  fill: #fff;
-  color: #fff;
+.active-btn-container.active {
+  background-color: #7189ff;
 }
 
-.feather-icon {
-  width: 50px;
-  height: 50px;
+/* todos content */
+
+.category-heading {
+  text-align: center;
+  font-size: var(--step-4);
+  margin: 2rem 0;
+
+  color: #624cab;
 }
 
-.project-container {
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 3rem 0;
+
+  font-family: 'reenie_beanieregular', sans-serif;
+}
+
+.project-heading {
+  text-align: center;
+  font-size: var(--step-4);
 }
 
 .todo-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #a0ddff;
 }
 
-.hide {
-  display: none;
+.todo-icons-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.completed {
+  color: #c1cefe;
+  text-decoration: line-through;
+}
+
+.todo-container input[type='checkbox'] {
+  appearance: none;
+  color: currentColor;
+  width: 1.5em;
+  height: 1.5em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+.todo-container input[type='checkbox']::before {
+  content: '';
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: #c1cefe;
+}
+
+.todo-container input[type='checkbox']:checked::before {
+  transform: scale(1);
 }
 
 .important {
   color: #d81159;
+}
+
+.completed {
+  color: #c1cefe;
+  text-decoration: line-through;
+}
+
+.description-container {
+  background-color: #a0ddff;
+  padding: 1rem 2rem;
+}
+
+.hide {
+  display: none;
 }
 
 .chevron-icon-container {
@@ -232,10 +336,16 @@ nav button {
   transform: scaleY(-1); /* vertical flip */
 }
 
-.active-btn-container.active {
-  outline: 2px solid #111;
+/* footer */
+
+footer {
+  grid-column: span 2;
+  padding: 0.5rem;
+  text-align: center;
+
+  background-color: #c1cefe;
 }
-.completed {
-  color: #c1cefe;
-  text-decoration: line-through;
+
+footer a {
+  color: #fff;
 }
