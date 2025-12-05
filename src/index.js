@@ -27,6 +27,30 @@ if (!JSON.parse(localStorage.getItem('Project Library'))) {
     false
   );
   addTodo(myProject.id, exampleTodo);
+
+  let exampleTodo2 = new Todo(
+    'Click the chevron icon to see the description.',
+    'Pretend details here...',
+    new Date(),
+    false
+  );
+  addTodo(myProject.id, exampleTodo2);
+
+  let exampleTodo3 = new Todo(
+    "Click the star icon to make this to do 'important'!",
+    'More pretend details here...',
+    new Date(),
+    false
+  );
+  addTodo(myProject.id, exampleTodo3);
+
+  let exampleTodo4 = new Todo(
+    'Click the circle checkbox to mark the to do as completed.',
+    'Blah blah blah...',
+    new Date(),
+    false
+  );
+  addTodo(myProject.id, exampleTodo4);
 }
 
 createProjectsIconAndButtonList();
