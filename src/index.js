@@ -10,6 +10,7 @@ import { createProjectsIconAndButtonList } from './modules/ui/projectNav.js';
 import { createCurrentActiveContent } from './modules/ui/activeContent.js';
 import { addTodoDialog } from './modules/ui/addTodoForm.js';
 import { addProjectDialog } from './modules/ui/addProjectForm.js';
+import { navbarToggle } from './modules/ui/responsiveNavigation.js';
 
 // Save library if it doesn't exist, otherwise it will be overwritten every time you load
 if (!JSON.parse(localStorage.getItem('Project Library'))) {

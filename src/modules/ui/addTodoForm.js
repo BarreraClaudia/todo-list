@@ -23,7 +23,7 @@ function createProjectOptions() {
 
   let chooseOptionEl = document.createElement('option');
   chooseOptionEl.setAttribute('value', '');
-  chooseOptionEl.textContent = '--Please choose a project--';
+  chooseOptionEl.textContent = '-Choose a project-';
   todoFormSelect.appendChild(chooseOptionEl);
 
   library.projects.forEach((project) => {

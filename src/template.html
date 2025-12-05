@@ -10,8 +10,16 @@
 
 <body>
     <div class="main-heading-container">
-        <h1>To Do List</h1>
-        <img src="./assets/imgs/list-icon.png" alt="list icon" class="list-icon">
+        <div class="main-heading-and-icon">
+            <h1>To Do List</h1>
+            <img src="./assets/imgs/list-icon.png" alt="list icon" class="list-icon">
+        </div>
+
+        <div class="navbar-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </div>
 
     <nav>
@@ -52,19 +60,19 @@
         <form action="#" id="add-todo-form">
             <h3>Add To Do</h3>
             <div class="form-group">
-                <label for="project">Project *</label>
+                <label for="project">Project*</label>
                 <select id="project" name="project" required></select>
             </div>
             <div class="form-group">
-                <label for="title">Title *</label>
+                <label for="title">Title*</label>
                 <input type="text" id="title" name="title" required>
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <input type="text" id="description" name="description">
+                <textarea name="description" id="description" rows="3"></textarea>
             </div>
             <div class="form-group">
-                <label for="due-date">Due Date *</label>
+                <label for="due-date">Due Date*</label>
                 <input type="date" id="due-date" name="due-date" required>
             </div>
             <div class="form-group">
@@ -84,15 +92,15 @@
                 <input type="text" id="edit-todo-current-project" name="edit-todo-current-project" readonly>
             </div>
             <div class="form-group">
-                <label for="edit-title">Title *</label>
+                <label for="edit-title">Title*</label>
                 <input type="text" id="edit-title" name="edit-title" required>
             </div>
             <div class="form-group">
                 <label for="edit-description">Description</label>
-                <input type="text" id="edit-description" name="edit-description" required>
+                <textarea name="edit-description" id="edit-description" rows="3"></textarea>
             </div>
             <div class="form-group">
-                <label for="edit-due-date">Due Date *</label>
+                <label for="edit-due-date">Due Date*</label>
                 <input type="date" id="edit-due-date" name="edit-due-date" required>
             </div>
             <div class="form-group">

@@ -24,6 +24,11 @@ function createCategoryContent(heading, todosArray) {
   let headingContent = createCategoryHeading(heading);
   let todosContent = createTodoElementsFromArray(todosArray);
 
+  if (todosContent.childNodes.length === 0) {
+    todosContent.textContent = "No to do's here! ┐( ˘_˘ )┌";
+    todosContent.classList.add('empty');
+  }
+
   contentContainer.appendChild(headingContent);
   contentContainer.appendChild(todosContent);
 

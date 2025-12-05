@@ -51,7 +51,6 @@ function createTodoElementsFromArray(arr) {
 
       let chevronIcon = createIcon('chevron-icon-container', 'chevron-down');
       iconsContainer.appendChild(chevronIcon);
-      // todoContainer.appendChild(chevronIcon);
 
       chevronIcon.addEventListener('click', () => {
         descriptionContainer.classList.toggle('hide');
@@ -60,7 +59,6 @@ function createTodoElementsFromArray(arr) {
 
       let starIcon = createIcon('star-icon-container', 'star');
       iconsContainer.appendChild(starIcon);
-      // todoContainer.appendChild(starIcon);
 
       if (todo.isImportant === true) todoContainer.classList.add('important');
 
@@ -72,7 +70,6 @@ function createTodoElementsFromArray(arr) {
 
       let editIcon = createIcon('edit-icon-container', 'edit-2');
       iconsContainer.appendChild(editIcon);
-      // todoContainer.appendChild(editIcon);
 
       editIcon.addEventListener('click', () => {
         editTodoDialog.showModal();
@@ -81,7 +78,6 @@ function createTodoElementsFromArray(arr) {
 
       let trashIcon = createIcon('trash-icon-container', 'trash');
       iconsContainer.appendChild(trashIcon);
-      // todoContainer.appendChild(trashIcon);
 
       trashIcon.addEventListener('click', () => {
         deleteTodo(project.id, todo.id);
