@@ -577,8 +577,19 @@ Media Queries
   }
 
   .todo-container {
+    grid-template-columns: auto 1fr;
+    align-items: center;
     gap: 0.5rem;
     padding: 1rem;
+  }
+
+  .date,
+  .todo-icons-container {
+    grid-column-start: 2;
+  }
+
+  .todo-icons-container {
+    justify-self: end;
   }
 
   /* navigation */
@@ -622,6 +633,3 @@ Media Queries
     background-color: #d81159;
   }
 }
-
-/* TO DO...... */
-/* logic for empty projects */

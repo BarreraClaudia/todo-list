@@ -43,6 +43,7 @@ function createTodoElementsFromArray(arr) {
       todoContainer.appendChild(titlePara);
 
       let datePara = document.createElement('p');
+      datePara.classList.add('date');
       datePara.textContent = todo.dueDate;
       todoContainer.appendChild(datePara);
 
